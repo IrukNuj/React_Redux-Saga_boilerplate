@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { Helmet } from 'react-helmet';
 import { Redirect, Route, Switch } from 'react-router';
+import { Navbar, Container, Button } from 'react-bootstrap';
 
 import Home from './components/Home';
 import Members from './containers/Members';
@@ -15,14 +16,17 @@ const App: FC = () => (
       <title>{title}</title>
     </Helmet>
 
-    <header className="App-header">
-      <h1>{title}</h1>
-    </header>
-    <Switch>
-      <Route path="/" exact component={Home} />
-      <Route path="/:companyName/members" component={Members} />
-      <Redirect to="/" />
-    </Switch>
+    <Navbar bg="primary">
+      <Navbar.Brand>{title}</Navbar.Brand>
+    </Navbar>
+    <Container>
+      <Button>hoge</Button>
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/:companyName/members" component={Members} />
+        <Redirect to="/" />
+      </Switch>
+    </Container>
   </>
 );
 
