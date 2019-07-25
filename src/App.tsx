@@ -7,7 +7,7 @@ import Members from './containers/Members';
 
 import './App.css';
 
-const title = 'いろんな会社のメンバー';
+const title = 'Here is /App.tsx';
 
 const App: FC = () => (
   <>
